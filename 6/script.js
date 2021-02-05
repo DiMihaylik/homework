@@ -9,7 +9,7 @@ function Animal(name, age, colour) {
   this.colour = colour
   }
   
-  let lion = Animal('Name', 'Age', 'Colour'); 
+  const lion = Animal('Name', 'Age', 'Colour'); 
 
 //2
 
@@ -18,6 +18,7 @@ function Calculator() {
   this.read = function() {
   
   this.firstVal = +prompt('Введите первое число')
+
   this.secondVal = +prompt('Введите второе число')
    }
   
@@ -28,14 +29,17 @@ function Calculator() {
    }
   
   this.sum = function(){
+
   return this.firstVal + this.secondVal
   }
   
   this.mul = function (){
+
   return this.firstVal / this.secondVal
   }
   
   this.min = function (){
+
   return this.firstVal - this.secondVal
   }
   
@@ -53,8 +57,8 @@ function Calculator() {
   
   return this.mul()
   
+    }
    }
-  }
   }
   
   
@@ -70,7 +74,7 @@ function Calculator() {
 
 function Nums(...arguments) {
 
-  this.args = arguments
+this.args = arguments
 
 }
 
@@ -84,7 +88,11 @@ this.args.filter(function(item) {
 
  sum += item
 
-  }})
+  }
+  
+  return sum
+
+})
 
 Nums.prototype.myFilterReverse = function() {
 
@@ -104,6 +112,7 @@ this.args.filter(function(item) {
 for(let i = filters.length; i > 0; i--) {
  
 reverse.push(filters.pop())
+
  }
 
 return reverse
@@ -114,23 +123,28 @@ return reverse
 let test = new Nums(1,2,3)
 
 test.getSum(); // найдет сумму всех элементов в свойстве args, которые являются целыми  числами.
-test.myFilterReverse(); // Отфильтруем массив в свойстве args и развернет массив (было [1, 2, 3] -> стало [3, 2, 1])
+const filtRevers = test.myFilterReverse(); // Отфильтруем массив в свойстве args и развернет массив (было [1, 2, 3] -> стало [3, 2, 1])
 
 //4
 
 let arr = [1, 1, 2, 2, 3];
 
 Array.prototype.getUnique = function () {
+
 let arr1 = []
+
 this.forEach(item => {
 
 if(!arr1.includes(item)){
+
 arr1.push(item)
+
   }
  }
 )
 
 return arr1
+
 }
 
 
