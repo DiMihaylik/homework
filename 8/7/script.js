@@ -1,6 +1,4 @@
 
-//не работает
-
 const div = document.getElementById('div');
 const input = document.getElementById('input');
 const button = document.getElementById('button');
@@ -11,7 +9,7 @@ function fn (event) {
 
     input.value = '' 
 
- }
+  }
 }
 
 div.addEventListener('click', fn)
