@@ -7,16 +7,11 @@ const button = document.getElementById('button');
 
 function fn (event) {
 
-  if (typeof event.target.value === 'number') {
+  if (isNaN(input.value)) {
 
-    console.log('ok')
+    input.value = '' 
 
-  } else {
-
-    event.preventDefault()
-
-  }
-
+ }
 }
 
 div.addEventListener('click', fn)
